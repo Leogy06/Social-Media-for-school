@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Feed</title>
-    <link rel="stylesheet" href="NewsFeed.css" />
     <!--Fontawesome-->
     <link
       rel="stylesheet"
@@ -15,22 +14,206 @@
     />
     <!--bootstrap-->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-grid.min.css"
-      integrity="sha512-2cWcZ9cbPMZFm2inlFOhwsBVbNMmNxKBtVXqL8OY9tXCZahhnIfXMxPCzpKqiHF2I2mOiNHNXEDUDglwd+4uYw=="
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <!--CSS-->
+    <link rel="stylesheet" href="NewsFeed.css" />
   </head>
   <body>
-    <div class="icon-bar">
-      <a class="active" href="#"><i class="fa fa-home"></i></a>
-      <a href="#"><i class="fa fa-search"></i></a>
-      <a href="#"><i class="fa fa-envelope"></i></a>
-      <a href="#"><i class="fa fa-globe"></i></a>
-      <a href="#"><i class="fa fa-trash"></i></a>
+    <nav
+      class="navbar navbar-nav navbar-expand-md"
+      style="background-color: #fff6cc"
+    >
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand"
+          ><img
+            src="pictures\SchoolLogo.png"
+            alt="school-logo"
+            class="img-logo w"
+        /></a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-contorls="nav"
+          aria-label="Expand Navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page"
+                ><i class="fa-solid fa-house fs-3"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="fa-solid fa-envelope fs-3"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="fa-solid fa-user fs-3"></i
+              ></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                ><i class="fa-regular fa-bell fs-3"></i
+              ></a>
+              <ul class="dropdown-menu p-1">
+                <li><a href="#" class="dropdown-item">some text</a></li>
+                <li><a href="#" class="dropdown-item">some text</a></li>
+                <li><a href="#" class="dropdown-item">some text</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a href="#" class="dropdown-item">some text</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              type="search"
+              name="search-bar"
+              class="form-control me-2"
+              placeholder="Search"
+              aria-label="search"
+            />
+            <button class="btn btn-outline-success" type="submit">Find</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container p-5">
+      <div class="row">
+        <div class="col-lg-3 col-sm-12 mb-sm-3">
+          <div class="box border border-success-subtle">1</div>
+        </div>
+        <!--The center container-->
+        <div class="col-lg-6 col-sm-12 mb-sm-3">
+          <div class="border mb-3 p-3 bg-white text-dark">
+            <form class="post-something">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Share something, yourself or someone ..."
+              />
+              <button class="btn btn-info my-2" type="submit">
+                <i class="fa-solid fa-upload me-1"></i>Post
+              </button>
+            </form>
+          </div>
+          <div class="row">
+            <div class="col-12 pb-3">
+              <div
+                class="container-fluid border rounded border-light-subtle bg-white p-3"
+                id="post-container"
+              >
+                <div class="user-info-newsfeed">
+                  <img
+                    src="https://w0.peakpx.com/wallpaper/862/384/HD-wallpaper-pan-pfp-pansexual.jpg"
+                    alt="Profile-pic"
+                    class="img-user-pfp-newsfeed"
+                  />
+                  <span>
+                    <a
+                      href="#"
+                      class="link-offset-2 link-dark link-underline-opacity-0 link-underline-opacity-100-hover"
+                    >
+                      <span>User Name</span>
+                    </a>
+                    <p id="post-caption">this is a caption</p>
+                  </span>
+                </div>
+                <div class="container-fluid">
+                  <img
+                    src="https://w0.peakpx.com/wallpaper/862/384/HD-wallpaper-pan-pfp-pansexual.jpg"
+                    alt="post-picture"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="container">
+                  <span
+                    ><button class="btn mt-1">
+                      <i class="fa-regular fa-heart me-1"></i><span>Like</span>
+                    </button></span
+                  >
+                  <span
+                    ><button class="btn mt-1">
+                      <i class="fa-regular fa-comment me-1"></i
+                      ><span>Comment</span>
+                    </button></span
+                  >
+                  <span
+                    ><button class="btn mt-1">
+                      <i class="fa-solid fa-share me-1"></i> <span>Share</span>
+                    </button></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div
+                class="container-fluid border rounded border-light-subtle bg-white p-3"
+                id="post-container"
+              >
+                <div class="user-info-newsfeed">
+                  <img
+                    src="https://w0.peakpx.com/wallpaper/862/384/HD-wallpaper-pan-pfp-pansexual.jpg"
+                    alt="Profile-pic"
+                    class="img-user-pfp-newsfeed"
+                  />
+                  <span>
+                    <a
+                      href="#"
+                      class="link-offset-2 link-dark link-underline-opacity-0 link-underline-opacity-100-hover"
+                    >
+                      <span>User Name</span>
+                    </a>
+                    <p id="post-caption">this is a caption</p>
+                  </span>
+                </div>
+                <div class="container-fluid">
+                  <img
+                    src="https://w0.peakpx.com/wallpaper/862/384/HD-wallpaper-pan-pfp-pansexual.jpg"
+                    alt="post-picture"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="container">
+                  <span
+                    ><button class="btn mt-1">
+                      <i class="fa-regular fa-heart me-1"></i><span>Like</span>
+                    </button></span
+                  >
+                  <span
+                    ><button class="btn mt-1">
+                      <i class="fa-regular fa-comment me-1"></i
+                      ><span>Comment</span>
+                    </button></span
+                  >
+                  <span
+                    ><button class="btn mt-1">
+                      <i class="fa-solid fa-share me-1"></i> <span>Share</span>
+                    </button></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+          <div class="box border border-success-subtle">2</div>
+        </div>
+      </div>
     </div>
-
     <!--Jquery-->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
@@ -40,10 +223,9 @@
     ></script>
     <!--bootstrap js-->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"
-      integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w=="
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
   </body>
 </html>
