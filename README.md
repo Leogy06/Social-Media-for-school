@@ -1,2 +1,3 @@
 # Social-Media-for-school
-Portfolio
+using html bootstrap jquery
+responsive design
